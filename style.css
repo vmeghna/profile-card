@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  border: 1px solid black;
+  background: linear-gradient(135deg, #b29edb, #a8640b);
+}
+.card {
+  width: 350px;
+  height: 470px;
+  margin: 100px auto 0;
+  perspective: 1000px;
+}
+.inner-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front {
+  background: url(./IMG_0827.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+.front h1 {
+  font-weight: 800;
+  margin-top: 20px;
+  color: white;
+}
+.front p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.front button {
+  width: 120px;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 50px;
+  padding: 8px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  color: #fff;
+}
+.back {
+  background: #fff;
+  color: #333;
+  padding: 20px 40px;
+  transform: rotateY(180deg);
+}
+.back h2 {
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 10px;
+}
+.back p {
+  font-weight: 800;
+  margin-top: 10px;
+}
+.back span {
+  font-weight: bolder;
+  font-size: larger;
+}
+.move {
+  width: 300px;
+  margin-left: -20px;
+}
+.row {
+  justify-content: space-around;
+  display: flex;
+  margin-top: 15px;
+}
+hr {
+  margin-top: 5px;
+}
+.card :hover.inner-card {
+  transform: rotateY(180deg);
+}
